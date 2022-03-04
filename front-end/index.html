@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zotuxe</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <main>
+        <form id="uploadForm" name="readme" action="" enctype="multipart/form-data" onsubmit="uploadreadme()">
+            <label for="nameArquivo">Titulo</label>
+            <input id="nameArquivo" name="nameArquivo" required type="text">
+            <input type="file" id="file" name="readme">
+            <input id="botão" type=submit value=Enviar>
+        </form>
+
+        <label for="nameBusca">Buscar por titulo</label>
+        <input id="nameBusca" type="text">
+        <input id="buttonBusca" type="button" value="Buscar">
+        <section id="caixinha"></section>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/script.js"></script>
+
+</html>
