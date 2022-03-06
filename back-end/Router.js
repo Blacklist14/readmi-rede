@@ -26,15 +26,24 @@ const upload = multer({
     })
 })
 router.use(cors())
+// Busca arquivo pelo nome 
 router.get("/:nome",async (req, res) => {
     const nome = req.params.nome
-    const texto = await fs.readFile("./upload/" + nome,"utf8")
-    const conv = md.render(texto)
-    res.send(conv)
+    const texto = await fs.readFile("./upload/" + nome,"utf8").then((reponse)=>{
+        const conv = md.render(reponse)
+        res.status(200).send(conv)
+    },(error)=>{res.status(404).send(error)})
 })
-
+// Pega todos arquivos cadastrados
+router.get("/",async (req,res) => {
+    const arquivos = await fs.readdir("./upload")
+    .then((reponse)=>{res.status(200).send(reponse)},
+    (error)=>{res.status(404).send(error)})
+})
+// Envia um novo arquivo
 router.post("/:id",upload.single('readme'),(req,res)=>{
     res.send("arquivo criado")
 })
+
 
 module.exports = router

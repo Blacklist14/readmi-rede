@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +8,14 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <header>
+        <section>
+            <label for="nameBusca">Buscar historia</label>
+            <input id="nameBusca" type="text">
+            <input id="buttonBusca" type="button" value="Buscar">
+        </section>
+    </header>
     <main>
-        <form id="uploadForm" name="readme" action="" enctype="multipart/form-data" onsubmit="uploadreadme()">
-            <label for="nameArquivo">Titulo</label>
-            <input id="nameArquivo" name="nameArquivo" required type="text">
-            <input type="file" id="file" name="readme">
-            <input id="botão" type=submit value=Enviar>
-        </form>
-
-        <label for="nameBusca">Buscar por titulo</label>
-        <input id="nameBusca" type="text">
-        <input id="buttonBusca" type="button" value="Buscar">
         <section id="caixinha"></section>
     </main>
 </body>
