@@ -10,9 +10,13 @@ buttonBusca.addEventListener("click", () => {
         buttonBusca.style.backgroundColor = "#7289DA"
     }, 100)
     //buscaHistoria
-    axios.get(`http://localhost:4444/${nome.value}.md`).then(async (response) => {
-        caixa.innerHTML = response.data
-    })
+    if(nome.value.length > 0){
+        axios.get(`http://localhost:4444/mark/${nome.value}.md`).then(async (response) => {
+            caixa.innerHTML = response.data
+        },(error)=>{alert("Historia não existe")})
+    }else{
+        alert("Digite uma historia")
+    }
 })
 
 //Busca ao pressionar enter dentro do campo de busca

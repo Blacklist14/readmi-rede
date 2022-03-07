@@ -1,10 +1,11 @@
 const express = require("express")
-const cors = require("cors")
 const app = express()
+const cors = require("cors")
+const mark = require("./Routers/markDown")
 
-app.use(require("./Router"))
-app.use(express.json())
 app.use(cors())
+app.use("/",mark)
+app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 app.listen(4444 ,() => {

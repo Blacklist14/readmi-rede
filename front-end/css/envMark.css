@@ -1,0 +1,57 @@
+*{ 
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+}
+body{
+    background-color: #23272A;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.5;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header section input{
+    border: none;
+    border-radius: 10px;
+}
+#formMark{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#formMark input{
+    margin: 10px;
+}
+#nameFile{
+    width: 350px;
+    height: 25px;
+    padding-left: 10px;
+    margin-right: 50px;
+    background-color: #99AAB5;
+}
+#buttonEnv{
+    margin-top: 10px;
+    width: 150px;
+    height: 25px;
+    background-color: #7289DA;
+    cursor: pointer;
+}
+#caixinha{
+    width: 1140px;
+    padding: 30px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #2C2F33;
+    border-radius: 10px;
+    border-color:#3e4247;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
